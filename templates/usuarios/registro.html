@@ -1,0 +1,48 @@
+
+{% load static %}
+
+
+<!--HTML BASE PARA TODAS LAS APPS-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REGISTRARSE</title>
+
+
+<body>
+    <!-- LOGIN -->
+
+    {% if user.is_authenticated %}
+                <span>Bienvenido {{user.username}}</span>
+                <a href="{% url 'home' %}">IR AL INICIO</a>
+            {% else %}
+                <a href="{% url 'login' %}">REGISTRATE</a>
+            {% endif %}
+
+    <!-- FIN MENU -->
+
+    <!-- <footer>
+        <a href="#carouselExampleSlidesOnly">Ir al Comienzo</a>
+        <br>
+        <a href="https//www..google.com" class="btn btn-primary">Ir a google</a>
+        <br>
+        <a target="_blank" href="https://www.facebook.com/groups/498186250237283">Grupo de Facebook</a>
+        <br>
+        <a target="_blank" href="https://www.instagram.com/Elangeldelabicicletacastelli">Instagram</a>
+        <br><br>
+
+        Copyright ©
+        <br>
+        Todos los derechos reservados
+    </footer> -->
+
+   
+
+    {% block contenido %}
+
+    {% endblock contenido %}
+
+  
+
