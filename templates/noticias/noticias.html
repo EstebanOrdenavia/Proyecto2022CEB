@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+    <section id="menu" class="menu section-bg">
+        <div class="container" data-aos="fade-up">
+        
+        <div class="section-title">
+            <br>
+            <br>
+            <br>
+            <br>            
+        </div>
+        <div class="section-title">
+            <h2>Noticias</h2>
+            <p>Check Our Tasty Menu</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+                <li data-filter="*" class="filter-active">Todas</li>
+                <li data-filter=".filter-starters">Patronales</li>
+                <li data-filter=".filter-salads">Comunidad</li>
+                <li data-filter=".filter-specialty">algo más</li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-12 menu-item filter-starters">
+                    <!--Falta colocar bien link imagen-->
+                <div class="menu-content">
+                    <a href="#">Lobster Bisquasglaisganksgamgkage</a><span>$5.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    <img src="{% static 'img/menu/lobster-bisque.jpg' %}" class="menu-img" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis ab consequuntur nihil aliquid cupiditate, dicta ipsam adipisci esse, sunt facere assumenda magnam nisi. Labore repellendus cumque voluptates, ipsa provident optio.</p>
+                    <div class="menu-ingredientes-link">
+                        <a href="{% url 'noticias:detalleNoticias' %}">Ver más</a>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        </div>
+    </section><!-- End Menu Section -->
+
+
+{% endblock contenido %}
+
+
+
+{% load static %}
+
+
