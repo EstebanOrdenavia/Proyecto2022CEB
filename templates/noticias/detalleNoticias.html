@@ -12,8 +12,8 @@
             <br> 
         </div>
         <div class="section-title">
-            <h2>Lunes 27 de agosto de 2022</h2> <!--Podría ir fecha de la noticia-->
-            <p>Un estudiante del informatio ganó la poceada</p> <!-- Titulo de la noticia-->
+            <h2>{{ notis.created }}</h2> <!--Podría ir fecha de la noticia-->
+            <p>{{ notis.titulo }}</p> <!-- Titulo de la noticia-->
         </div>
 
      
@@ -22,35 +22,20 @@
                 <div class="tab-pane active show" id="tab-1">
                     <div class="row">
                         <div class="col-lg-8 details order-2 order-lg-1">
-                            <h3>Architecto ut aperiam autem id</h3>
-                            <p class="fst-italic">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-                            <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. 
-                                Incidunt hic ut molestiae aut qui. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur 
-                                maxime quas, unde omnis vero asperiores. Tempora a rem, magni earum soluta accusantium, cupiditate sint 
-                                incidunt quam vitae blanditiis nam itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Laudantium iusto inventore voluptate ex nobis fugit dolores! Accusantium pariatur harum neque non laudantium 
-                                excepturi vel blanditiis enim asperiores? Error, voluptas cumque! Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Esse accusantium vitae molestiae eos nulla sunt! Quos quidem reprehenderit sit soluta 
-                                praesentium excepturi rem totam rerum vel fugiat, repellendus in nisi. Lorem ipsum dolor, sit amet consectetur 
-                                adipisicing elit. Consequuntur, debitis aperiam. Iste voluptates dolores consequuntur, itaque exercitationem 
-                                libero voluptas laborum nostrum iure! Iusto, illo voluptate! Consectetur perferendis delectus distinctio quia. 
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus sunt saepe dolorum corrupti nihil asperiores 
-                                ea aperiam quasi, vero, aliquid voluptatum nisi non similique velit odit quisquam. Hic, nisi saepe. Lorem ipsum 
-                                dolor sit amet consectetur adipisicing elit. Distinctio incidunt iste perspiciatis illum, minima repudiandae ab 
-                                at consequuntur doloribus beatae? Optio nulla necessitatibus quod omnis totam obcaecati veritatis iste dicta. 
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum soluta veritatis officiis voluptatum, unde, 
-                                iste earum, atque sequi sint possimus ab obcaecati ullam ratione eos nesciunt maxime provident delectus velit? 
-                                Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus 
-                                nostrum rem vero
-                            </p>
-                        </div>
-                        <div class="col-lg-4 text-center order-1 order-lg-2">
-                            <img src="{& static 'img/specials-1.png' &}" alt="" class="img-fluid">
+                            <img src="{{notis.imagen.url}}" class="" alt="">
+                            <p>{{notis.descripcion}}</p>
+                            {% if notis.autor %}
+                                <p>{{notis.autor}}</p>
+                            {% else %}
+                                <p>Autor anónimo.</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- FALTA HACER LA SECCION DE LOS COMENTARIOS + CONTROL DE USUARIO REGISTRADO PARA COMENTAR-->
     </div>
 </section><!-- End Specials Section -->
 

@@ -13,8 +13,7 @@
             <br>            
         </div>
         <div class="section-title">
-            <h2>Noticias</h2>
-            <p>Check Our Tasty Menu</p>
+            <p>Noticias</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -32,17 +31,19 @@
 
             <div class="col-lg-12 menu-item filter-starters">
                     <!--Falta colocar bien link imagen-->
+            {% for noticia in noticias %}
                 <div class="menu-content">
-                    <a href="#">Lobster Bisquasglaisganksgamgkage</a><span>$5.95</span>
+                    <span>{{ noticia.titulo }}</span>
                 </div>
                 <div class="menu-ingredients">
-                    <img src="{% static 'img/menu/lobster-bisque.jpg' %}" class="menu-img" alt="">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis ab consequuntur nihil aliquid cupiditate, dicta ipsam adipisci esse, sunt facere assumenda magnam nisi. Labore repellendus cumque voluptates, ipsa provident optio.</p>
+                    <img src="{{noticia.imagen.url}}" class="menu-img" alt="">
+                    <p>{{ noticia.descripcion }}</p>
+                    <p>Categoria: {{noticia.categoria}}</p>
                     <div class="menu-ingredientes-link">
-                        <a href="{% url 'noticias:detalleNoticias' %}">Ver más</a>
+                        <a href="{% url 'noticias:detalleNoticias' noticia.pk %}">Ver más</a>
                     </div>
                 </div>
-                
+            {% endfor %}
             </div>
 
         </div>
@@ -56,5 +57,4 @@
 
 
 {% load static %}
-
 
