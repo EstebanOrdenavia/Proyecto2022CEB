@@ -26,7 +26,12 @@ urlpatterns = [
     path('login/',auth.LoginView.as_view(template_name='usuarios/login.html'),name='login'),
     path('logout/',auth.LogoutView.as_view(),name="logout"),
     path('', views.Home, name = 'home'),
+<<<<<<< Updated upstream
     path('usuarios/',include('apps.usuarios.urls')),
+=======
+    path('historia', views.Historia, name = 'historia'),
+    path('eventos', include("apps.eventos.urls")),
+>>>>>>> Stashed changes
     path("sobreNosotros",include("apps.sobrenosotros.urls")),
     path('noticias', include('apps.noticias.urls')),
 
