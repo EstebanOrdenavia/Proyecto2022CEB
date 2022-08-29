@@ -14,23 +14,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
 from django.conf.urls.static import static
 from django.conf import settings
-from . import views
-from . views import registro
 
-
+#LOGIN
 from django.contrib.auth import views as auth
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/',auth.LoginView.as_view(template_name='usuarios/login.html'),name='login'),
-    path('logout/',auth.LogoutView.as_view(),name='logout'),
-    path('registro/', registro, name='registro'),
-
+    path('logout/',auth.LogoutView.as_view(),name="logout"),
     path('', views.Home, name = 'home'),
+    path('usuarios/',include('apps.usuarios.urls')),
     path("sobreNosotros",include("apps.sobrenosotros.urls")),
     path('noticias', include('apps.noticias.urls')),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
