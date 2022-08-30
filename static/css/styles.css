@@ -1469,10 +1469,26 @@ section {
 .barra{
   margin-top: 30px;
   background: rgb(40, 37, 31);
-  padding: 6px 10px;
+  padding: 6px 70px;
   position: relative;
   border-radius: 50px;
-  border: 1px solid rgb(69, 64, 53);
+  border: 3px solid rgb(205, 164, 94);
   margin-top: 0px;
   margin-bottom: 10px;
+}
+
+.card-body{
+  margin-top: 20px;
+  background-color: rgb(30,27,27);
+  border-radius: 30px; 
+ 
+
+}
+.card{
+--bs-card-bg:none;
+
+}
+.iniciarsesion{
+  color: rgb(255, 255, 255);
+  font-family: "Open Sans", sans-serif;
 }
