@@ -1,7 +1,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #0c0b09;
+  background: #000;
   color: #fff;
 }
 
@@ -129,7 +129,7 @@ h6 {
   border-bottom: 1px solid rgba(12, 11, 9, 0.6);
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  /* padding: 15px 0; */
   top: 0px;
 }
 
@@ -158,16 +158,17 @@ h6 {
 # Book a table button Menu
 --------------------------------------------------------------*/
 .book-a-table-btn { 
-
-  margin: 0 0 0 15px ;
-  border: 2px solid #cda45e ;
-  border-radius: 50px ;
-  padding: 8px 25px ;
-  text-transform: uppercase ;
-  font-size: 13px ;
-  font-weight: 500 ;
-  letter-spacing: 1px ;
-  transition: 0.3s ;
+    background: #0c0b09 ;
+    color: #fff;
+    margin: 0 0 0 15px ;
+    border: 2px solid #cda45e ;
+    border-radius: 50px ;
+    padding: 8px 25px ;
+    text-transform: uppercase ;
+    font-size: 13px ;
+    font-weight: 500 ;
+    letter-spacing: 1px ;
+    transition: 0.3s ;
 }
 
 .book-a-table-btn:hover {
@@ -638,7 +639,7 @@ section {
 }
 
 .section-bg {
-   background-color: #1a1814; 
+   background-color: #000; 
 }
 
 .section-title {
@@ -1466,15 +1467,16 @@ section {
   margin-left: 10px
 }
 
-.barra{
-  margin-top: 30px;
-  background: rgb(40, 37, 31);
-  padding: 6px 70px;
-  position: relative;
-  border-radius: 50px;
-  border: 3px solid rgb(205, 164, 94);
-  margin-top: 0px;
-  margin-bottom: 10px;
+.barra {
+    color: #fff !important;
+    margin-top: 30px !important;
+    background: rgb(40, 37, 31)!important;
+    padding: 6px !important;
+    position: relative !important;
+    border-radius: 50px !important;
+    border: 3px solid rgb(205, 164, 94) !important;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
 }
 
 .card-body{
@@ -1491,4 +1493,112 @@ section {
 .iniciarsesion{
   color: rgb(255, 255, 255);
   font-family: "Open Sans", sans-serif;
+  font-size: 32px;
 }
+
+.about-img {
+  opacity: 0.4;
+}
+
+/*-------------------------------------------------------------------------------*/
+.calendar {
+    background: dimgrey;
+    width: 25%;
+    max-width: 400px;
+    margin: 1em auto;
+    padding: .5em 0;
+    display: block;
+    position: absolute;
+    left: 73%;
+    top: 200px;
+    opacity: 0.9;
+    }
+
+.calendar__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 2em;
+    font-size: 1.2em;
+    text-transform: uppercase; }
+
+
+.calendar__prev, .calendar__next {
+    color: #cda45e;
+    cursor: pointer;
+    font-size: 1.3em; }
+
+.calendar__prev {
+      margin-right: auto; }
+.calendar__next {
+      margin-left: auto; }
+
+.calendar__week, .calendar__dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 10px; }
+
+.calendar__month, .calendar__year {
+      padding: .5em 1em; }
+
+.calendar__item {
+      text-align: center;
+      line-height: 2; }
+
+.calendar__today {
+      background: #cda45e;
+      color: white;
+      width: 50%;
+      border-radius: 55%;
+      margin: auto; }
+.calendar__last-days {
+      opacity: .3; }
+
+.noticias {
+        margin: 120px auto;
+        padding-left: 220px;
+        display: block;
+        position: absolute;
+        text-align: center
+        
+    }
+
+.imagen {
+
+        /* cambia estos dos valores para definir el tamaño de tu círculo */
+        height: 250px;
+        width: 250px;
+        /* los siguientes valores son independientes del tamaño del círculo */
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border-radius: 50%;
+        background-size: 100% auto;
+        border-style:solid black;
+        opacity: 0.6;
+    }
+
+.boton-info:hover{
+        background-color: rgb(252, 208, 173);
+        width: 50px auto;
+        cursor: pointer;
+
+ }
+
+.fecha {
+        color:rgb(114, 44, 18);
+
+ }
+
+ .boton-info {
+  opacity: 0.5;
+ }
+
+ .textcomentarios {
+    height: 100px;
+    text-align: inherit;
+    background: #000000;
+    color: #fff;
+ }
