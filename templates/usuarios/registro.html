@@ -1,8 +1,13 @@
+<<<<<<< Updated upstream
 {% extends 'base.html' %}
+=======
+{% extends "base.html"%}
+>>>>>>> Stashed changes
 {% load static %}
 
 {% block contenido %}
 
+<<<<<<< Updated upstream
 <main role="main" class="hero" style="height:100%; width:100%">
   <div class="container">
     <div class="row">
@@ -45,5 +50,26 @@
     </div>
   </div>
 </main>
+=======
+
+{% block contenido %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    {% if user.is_authenticated %}
+                <span>Bienvenido {{user.username}}</span>
+                <a href="{% url 'home' %}">IR AL INICIO</a>
+            {% else %}
+                <a href="{% url 'login' %}">REGISTRATE</a>
+            {% endif %}
+
+{% endblock contenido %}
+
+  
+>>>>>>> Stashed changes
 
 {% endblock %}

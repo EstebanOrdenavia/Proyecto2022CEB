@@ -1444,3 +1444,36 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+.login{
+  margin-top: 150px;
+  margin-left: 400px;
+}
+
+.enviar{
+  
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 0;
+  background: rgb(205, 164, 94);
+  font-size: 16px;
+  padding: 0 20px 2px 20px;
+  background: #cda45e;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+  margin-left: 10px
+}
+
+.barra{
+  margin-top: 30px;
+  background: rgb(40, 37, 31);
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  border: 1px solid rgb(69, 64, 53);
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+}
