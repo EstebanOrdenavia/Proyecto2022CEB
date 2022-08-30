@@ -1,18 +1,19 @@
-<<<<<<< Updated upstream
+
 {% extends 'base.html' %}
-=======
-{% extends "base.html"%}
->>>>>>> Stashed changes
 {% load static %}
 
 {% block contenido %}
 
-<<<<<<< Updated upstream
+
 <main role="main" class="hero" style="height:100%; width:100%">
   <div class="container">
     <div class="row">
+       
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto mt-5 pt-3">
+        <br>
+        
         <div class="card border-0 shadow rounded-3 my-5">
+            
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-bold fs-5">Registrate</h5>
             <form action="" method="post">{% csrf_token %}         
@@ -50,26 +51,7 @@
     </div>
   </div>
 </main>
-=======
 
-{% block contenido %}
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-    {% if user.is_authenticated %}
-                <span>Bienvenido {{user.username}}</span>
-                <a href="{% url 'home' %}">IR AL INICIO</a>
-            {% else %}
-                <a href="{% url 'login' %}">REGISTRATE</a>
-            {% endif %}
 
 {% endblock contenido %}
 
-  
->>>>>>> Stashed changes
-
-{% endblock %}
