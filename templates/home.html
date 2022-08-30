@@ -13,13 +13,15 @@
     
               <div class="btns">
                 {% if user.is_authenticated == False %}
-                <a href="{% url 'usuarios:registro' %}" class="btn-menu animated fadeInUp scrollto">Registrarse</a>
+                    <a href="{% url 'usuarios:registro' %}" class="btn-menu animated fadeInUp scrollto">Registrarse</a>
+                    <a class="btn-menu animated fadeInUp scrollto" href="{% url 'login' %}">Iniciar sesión</a>
                 {% else %}
-                <!-- Nada -->
+                    <a class="btn-menu animated fadeInUp scrollto" href="{% url 'logout' %}">Cerrar sesión</a>
                 {% endif %}
               </div>
             </div>
            
+         
     
           </div>
         </div>
