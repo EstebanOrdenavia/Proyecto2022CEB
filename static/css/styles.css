@@ -1492,3 +1492,103 @@ section {
   color: rgb(255, 255, 255);
   font-family: "Open Sans", sans-serif;
 }
+
+.about-img {
+  opacity: 0.4;
+}
+
+/*-------------------------------------------------------------------------------*/
+.calendar {
+    background: dimgrey;
+    width: 25%;
+    max-width: 400px;
+    margin: 1em auto;
+    padding: .5em 0;
+    display: block;
+    position: absolute;
+    left: 73%;
+    top: 200px;
+    opacity: 0.9;
+    }
+
+.calendar__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 2em;
+    font-size: 1.2em;
+    text-transform: uppercase; }
+
+
+.calendar__prev, .calendar__next {
+    color: #cda45e;
+    cursor: pointer;
+    font-size: 1.3em; }
+
+.calendar__prev {
+      margin-right: auto; }
+.calendar__next {
+      margin-left: auto; }
+
+.calendar__week, .calendar__dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 10px; }
+
+.calendar__month, .calendar__year {
+      padding: .5em 1em; }
+
+.calendar__item {
+      text-align: center;
+      line-height: 2; }
+
+.calendar__today {
+      background: #cda45e;
+      color: white;
+      width: 50%;
+      border-radius: 55%;
+      margin: auto; }
+.calendar__last-days {
+      opacity: .3; }
+
+.noticias {
+        margin: 120px auto;
+        padding-left: 220px;
+        display: block;
+        position: absolute;
+        text-align: center
+        
+    }
+
+.imagen {
+
+        /* cambia estos dos valores para definir el tamaño de tu círculo */
+        height: 250px;
+        width: 250px;
+        /* los siguientes valores son independientes del tamaño del círculo */
+        background-repeat: no-repeat;
+        background-position: 50%;
+        border-radius: 50%;
+        background-size: 100% auto;
+        border-style:solid black;
+        opacity: 0.6;
+    }
+
+.boton-info:hover{
+        background-color: rgb(252, 208, 173);
+        width: 50px auto;
+        cursor: pointer;
+
+ }
+
+.fecha {
+        color:rgb(114, 44, 18);
+
+ }
+
+ .boton-info {
+  opacity: 0.5;
+ }

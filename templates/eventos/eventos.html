@@ -1,19 +1,129 @@
-
-{% extends 'base.html' %}
+{% extends "base.html"%}
 {% load static %}
+
+
 
 {% block contenido %}
 
+    <div class="calendar">  <!--calendario-->
+                <div class="calendar__info">
+                    <div class="calendar__prev" id="prev-month">&#9664;</div>
+                    <div class="calendar__month" id="month"></div>
+                    <div class="calendar__year" id="year"></div>
+                    <div class="calendar__next" id="next-month">&#9654;</div>
+                </div>
+
+                <div class="calendar__week">
+                    <div class="calendar__day calendar__item">Lun</div>
+                    <div class="calendar__day calendar__item">Mar</div>
+                    <div class="calendar__day calendar__item">Mie</div>
+                    <div class="calendar__day calendar__item">Jue</div>
+                    <div class="calendar__day calendar__item">Vie</div>
+                    <div class="calendar__day calendar__item">Sab</div>
+                    <div class="calendar__day calendar__item">Dom</div>
+                </div>
+
+                <div class="calendar__dates" id="dates"></div>
+        </div>
+    <section id="menu" class="menu section-bg">
+        <div class="container" data-aos="fade-up">
+        
+        <div class="section-title">
+            <br>
+            
+        </div>
+        <div class="section-title">
+            <p>Eventos</p>
+        </div>
+
+        <div class="event" data-aos="fade-up" data-aos-delay="200">
+            <div class="ev">
+                <div class="noticia-info">
+                  <div>
+                    <img class="imagen" src="{% static 'img/bicicleta.jpg'%}"/>
+
+                
+                    <div class="titulo-evento">
+                        <h4 class="fecha">07 DE SEPTIEMBRE</h4><br>
+                      <h3>¡Bajen Las Armas, Aquí Sólo Hay Pibes Comiendo!</h3>
+                
+                      <p class="info-evento">7°.Evento en memoria a Claudio Pocho Lepratti<br>
+                         "El Ángel de la Bicicleta"<br>
+                        - Grupos Musicales<br>
+                        - Exposición y stencil de remeras<br>
+                        -Juegos para la familia<br>
+                        -Regalos Sorpesas<br>
+                        ¡Y Mucho más!<br>
+                        Veni, animate, participa!</p><br>
+                      <p>
+                        <button class="boton-info" type="button" class="btn btn-outline-info">Mas Info</button> <!--****-->
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
 
-    <!-- eventos, pendiente -->
+                <br><br><!--espacio-->
+                <hr>
+                <br><!--espacio-->
 
-    
+                <div class="noticia-info"> <!--segundo-->
+                    <div>
+                      <img  class="imagen" src="{% static 'img/charlaviolencia.jpg'%}"/>
+                      <div class="noticia-info">
+                        <h4 class="fecha">15 DE SEPTIEMBRE</h4><br>
+                        <h3>¡No callemos mas ante la violencia!</h3>
+                        
+                        <p class="info-evento">
+                            Todos invitados a la charla contra la violencia de género,
+                            <br> prevención, acompañamiento<br>
+                            y denuncia.
+                        </p>
+                        <p>
+                        <button class="boton-info" type="button" class="btn btn-outline-info" href="https://www.facebook.com/groups/498186250237283/">Más Info</button> <!--****-->
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-    
+
+                  <br><br> <!--espacio-->
+                  <hr>
+                  <br><!--espacio-->
+
+
+                  <div class="noticia-info"> <!--tercero-->
+                    <div >
+                      <img  class="imagen"src="{% static 'img/adicciones.jpg'%}"/>
+                  
+                      <div class="titulo-evento">
+                        <h4 class="fecha">29 DE SEPTIEMBRE</h4><br>
+                        <h3>Prevención de Adicciones</h3>
+                        
+                        <p class="info-evento">
+                        Charla informativa sobre la prevención de adicciones<br>
+                         en el ámbito educativo y familiar.
+                        </p>
+                        <p>
+                          
+                        <button class="boton-info" type="button" class="btn btn-outline-info" href="https://www.facebook.com/groups/498186250237283/">Más Info</button> <!--****-->
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <br><br> <!--espacio-->
+        </div>
+
+        
+
+
+              
+
+              
+
+            
+    </section>
+    <script type='text/javascript' src="{% static 'js/scripts.js' %}"></script>
 
 {% endblock contenido %}
-
-
-
-{% load static %}
