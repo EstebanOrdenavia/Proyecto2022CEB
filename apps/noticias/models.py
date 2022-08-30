@@ -29,6 +29,9 @@ class Noticia(models.Model):
     def __str__(self):
         return self.titulo
 
+    def obtener_comentarios(self):
+        return self.mis_comentarios.all()
+
 class Comentario(models.Model):
     noticia = models.ForeignKey(Noticia, related_name = 'mis_comentarios', on_delete= models.CASCADE)
     texto = models.TextField()
