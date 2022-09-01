@@ -28,7 +28,7 @@ urlpatterns = [
     path('', views.Home, name = 'home'),
 
     path('usuarios/',include('apps.usuarios.urls')),
-
+    
     path('historia', views.Historia, name = 'historia'),
     path('eventos', include("apps.eventos.urls")),
     path("sobreNosotros",include("apps.sobrenosotros.urls")),

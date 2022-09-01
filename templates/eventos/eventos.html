@@ -5,69 +5,91 @@
 
 {% block contenido %}
 
-    <div class="calendar">  <!--calendario-->
-                <div class="calendar__info">
-                    <div class="calendar__prev" id="prev-month">&#9664;</div>
-                    <div class="calendar__month" id="month"></div>
-                    <div class="calendar__year" id="year"></div>
-                    <div class="calendar__next" id="next-month">&#9654;</div>
-                </div>
-
-                <div class="calendar__week">
-                    <div class="calendar__day calendar__item">Lun</div>
-                    <div class="calendar__day calendar__item">Mar</div>
-                    <div class="calendar__day calendar__item">Mie</div>
-                    <div class="calendar__day calendar__item">Jue</div>
-                    <div class="calendar__day calendar__item">Vie</div>
-                    <div class="calendar__day calendar__item">Sab</div>
-                    <div class="calendar__day calendar__item">Dom</div>
-                </div>
-
-                <div class="calendar__dates" id="dates"></div>
+    <div class="container">
+        <div class="calendar calendar">  
+            <div class="calendar__info">
+                <div class="calendar__prev" id="prev-month">&#9664;</div>
+                <div class="calendar__month" id="month"></div>
+                <div class="calendar__year" id="year"></div>
+                <div class="calendar__next" id="next-month">&#9654;</div>
+            </div>
+    
+            <div class="calendar__week">
+                <div class="calendar__day calendar__item">Lun</div>
+                <div class="calendar__day calendar__item">Mar</div>
+                <div class="calendar__day calendar__item">Mie</div>
+                <div class="calendar__day calendar__item">Jue</div>
+                <div class="calendar__day calendar__item">Vie</div>
+                <div class="calendar__day calendar__item">Sab</div>
+                <div class="calendar__day calendar__item">Dom</div>
+            </div>
+    
+            <div class="calendar__dates" id="dates"></div>
         </div>
-    <section id="menu" class="menu section-bg">
-        <div class="container" data-aos="fade-up">
-        
-        <div class="section-title">
-            <br>
+        <section id="menu" class="menu section-bg">
+            <div class="container" data-aos="fade-up">
             
-        </div>
-        <div class="section-title">
-            <p>Eventos</p>
-        </div>
+                <div class="section-title">
+                    <br>
+                    
+                </div>
+                <div class="section-title">
+                    <p>Eventos</p>
+                </div>
+                <!--Acá tendría que ir el for-->
 
-        <div class="event" data-aos="fade-up" data-aos-delay="200">
+                <div class="card" style="width: 30rem;">
+                    <img src="{% static 'img/bicicleta.jpg'%}" class="card-img-top" alt="...">  <!--Imagen-->
+                <div class="card-body">
+                    <h5>07 de septiembre</h5> <!--Fecha-->
+                    <h2 class="card-title">¡Bajen Las Armas, Aquí Sólo Hay Pibes Comiendo!</h2> <!--Titulo-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{% url 'eventos:detalleEventos' %}" class=" btn-menu animated fadeInUp scrollto">Ver más</a>
+                </div>
+          </div>
+          <br>
+          <br>
+          <!--Acá terminaría el for-->
+        </section>
+    </div>
+    
+
+        
+
+        
+        <!-- <div class="event" data-aos="fade-up" data-aos-delay="200">
             <div class="ev">
                 <div class="noticia-info">
-                  <div>
-                    <img class="imagen" src="{% static 'img/bicicleta.jpg'%}"/>
+                    <div>
+                        <img class="imagen" src="{% static 'img/bicicleta.jpg'%}"/>
 
-                
-                    <div class="titulo-evento">
-                        <h4 class="fecha">07 DE SEPTIEMBRE</h4><br>
-                      <h3>¡Bajen Las Armas, Aquí Sólo Hay Pibes Comiendo!</h3>
-                
-                      <p class="info-evento">7°.Evento en memoria a Claudio Pocho Lepratti<br>
-                         "El Ángel de la Bicicleta"<br>
-                        - Grupos Musicales<br>
-                        - Exposición y stencil de remeras<br>
-                        -Juegos para la familia<br>
-                        -Regalos Sorpesas<br>
-                        ¡Y Mucho más!<br>
-                        Veni, animate, participa!</p><br>
-                      <p>
-                        <button class="boton-info" type="button" class="btn btn-outline-info">Mas Info</button> <!--****-->
-                      </p>
+                    
+                        <div class="titulo-evento">
+                            
+                            <h4 class="fecha">07 DE SEPTIEMBRE</h4><br>
+                            <h3>¡Bajen Las Armas, Aquí Sólo Hay Pibes Comiendo!</h3>
+                        
+                            <p class="info-evento">7°.Evento en memoria a Claudio Pocho Lepratti<br>
+                                " El Ángel de la Bicicleta"<br>
+                                - Grupos Musicales<br>
+                                - Exposición y stencil de remeras<br>
+                                - Juegos para la familia<br>
+                                - Regalos Sorpesas<br>
+                                ¡ Y Mucho más!<br>
+                                Veni, animate, participa!</p><br>
+                            <p>
+                                <a href="{% url 'eventos:detalleEventos' %}">Más info</a> 
+                            </p>
+                        </div>
                     </div>
-                  </div>
                 </div>
 
 
-                <br><br><!--espacio-->
+                <br><br>
                 <hr>
-                <br><!--espacio-->
+                <br>
 
-                <div class="noticia-info"> <!--segundo-->
+                <div class="noticia-info"> 
                     <div>
                       <img  class="imagen" src="{% static 'img/charlaviolencia.jpg'%}"/>
                       <div class="noticia-info">
@@ -80,40 +102,39 @@
                             y denuncia.
                         </p>
                         <p>
-                        <button class="boton-info" type="button" class="btn btn-outline-info" href="https://www.facebook.com/groups/498186250237283/">Más Info</button> <!--****-->
+                        <button class="boton-info" type="button" class="btn btn-outline-info" href="https://www.facebook.com/groups/498186250237283/">Más Info</button>
                         </p>
                       </div>
                     </div>
                   </div>
 
 
-                  <br><br> <!--espacio-->
+                  <br><br>
                   <hr>
-                  <br><!--espacio-->
+                  <br>
 
-
-                  <div class="noticia-info"> <!--tercero-->
+                  <div class="noticia-info"> 
                     <div >
-                      <img  class="imagen"src="{% static 'img/adicciones.jpg'%}"/>
-                  
-                      <div class="titulo-evento">
-                        <h4 class="fecha">29 DE SEPTIEMBRE</h4><br>
-                        <h3>Prevención de Adicciones</h3>
-                        
-                        <p class="info-evento">
-                        Charla informativa sobre la prevención de adicciones<br>
-                         en el ámbito educativo y familiar.
-                        </p>
-                        <p>
-                          
-                        <button class="boton-info" type="button" class="btn btn-outline-info" href="https://www.facebook.com/groups/498186250237283/">Más Info</button> <!--****-->
-                        </p>
-                      </div>
+                        <img  class="imagen"src="{% static 'img/adicciones.jpg'%}"/>
+                    
+                        <div class="titulo-evento">
+                            <h4 class="fecha">29 DE SEPTIEMBRE</h4><br>
+                            <h3>Prevención de Adicciones</h3>
+                            
+                            <p class="info-evento">
+                            Charla informativa sobre la prevención de adicciones<br>
+                            en el ámbito educativo y familiar.
+                            </p>
+                            <p>
+                            
+                            <button class="boton-info" type="button" class="btn btn-outline-info" href="https://www.facebook.com/groups/498186250237283/">Más Info</button> 
+                            </p>
+                        </div>
                     </div>
-                  </div>
-              </div>
-              <br><br> <!--espacio-->
-        </div>
+                </div>
+            </div>
+              <br><br> >
+        </div> -->
 
         
 
@@ -123,7 +144,7 @@
               
 
             
-    </section>
+    
     <script type='text/javascript' src="{% static 'js/scripts.js' %}"></script>
 
 {% endblock contenido %}
