@@ -6,26 +6,59 @@
 {% block contenido %}
 
     <div class="container">
-        <div class="calendar calendar">  
-            <div class="calendar__info">
-                <div class="calendar__prev" id="prev-month">&#9664;</div>
-                <div class="calendar__month" id="month"></div>
-                <div class="calendar__year" id="year"></div>
-                <div class="calendar__next" id="next-month">&#9654;</div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-6 order-2 order-lg-2" style="background: dimgrey; padding: 0.5em 0; opacity: 0.9; border-radius: 15px; margin-top: 159px; height: fit-content; margin-bottom: 20px;">  
+                <div class="calendar__info">
+                    <div class="calendar__prev" id="prev-month">&#9664;</div>
+                    <div class="calendar__month" id="month"></div>
+                    <div class="calendar__year" id="year"></div>
+                    <div class="calendar__next" id="next-month">&#9654;</div>
+                </div>
+        
+                <div class="calendar__week">
+                    <div class="calendar__day calendar__item">Lun</div>
+                    <div class="calendar__day calendar__item">Mar</div>
+                    <div class="calendar__day calendar__item">Mie</div>
+                    <div class="calendar__day calendar__item">Jue</div>
+                    <div class="calendar__day calendar__item">Vie</div>
+                    <div class="calendar__day calendar__item">Sab</div>
+                    <div class="calendar__day calendar__item">Dom</div>
+                </div>
+        
+                <div class="calendar__dates" id="dates"></div>
             </div>
+            <section id="menu" class="menu section-bg col-lg-6 pt-4 pt-lg-0 order-1 order-lg-1 ">
+                <div class="container" data-aos="fade-up">
+                
+                    <div class="section-title">
+                        <br>
+                        
+                    </div>
+                    <div class="section-title">
+                        <p>Eventos</p>
+                    </div>
+                    <!--Acá tendría que ir el for-->
     
-            <div class="calendar__week">
-                <div class="calendar__day calendar__item">Lun</div>
-                <div class="calendar__day calendar__item">Mar</div>
-                <div class="calendar__day calendar__item">Mie</div>
-                <div class="calendar__day calendar__item">Jue</div>
-                <div class="calendar__day calendar__item">Vie</div>
-                <div class="calendar__day calendar__item">Sab</div>
-                <div class="calendar__day calendar__item">Dom</div>
-            </div>
-    
-            <div class="calendar__dates" id="dates"></div>
+                    <div class="card" style="width: 30rem;">
+                        <img src="{% static 'img/bicicleta.jpg'%}" class="card-img-top" alt="...">  <!--Imagen-->
+                    <div class="card-body">
+                        <h5>07 de septiembre</h5> <!--Fecha-->
+                        <h2 class="card-title">¡Bajen Las Armas, Aquí Sólo Hay Pibes Comiendo!</h2> <!--Titulo-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="{% url 'eventos:detalleEventos' %}" class=" btn-menu animated fadeInUp scrollto">Ver más</a>
+                    </div>
+              </div>
+              <br>
+              <br>
+              <!--Acá terminaría el for-->
+            </section>
         </div>
+<<<<<<< Updated upstream
         <section id="menu" class="menu section-bg">
             <div class="container" data-aos="fade-up">
             
@@ -52,8 +85,10 @@
             {% endfor %}
           <!--Acá terminaría el for-->
         </section>
+=======
+        
+>>>>>>> Stashed changes
     </div>
-    
 
         
 
